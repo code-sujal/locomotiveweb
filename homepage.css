@@ -1,0 +1,64 @@
+.navbar-name{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 23px;
+    margin-left: px;
+}
+
+header .p-3{
+    color: black;
+}
+
+ .nav{
+    font-family: "Mukta", sans-serif;
+    
+}
+
+.hero-section{
+    background-image: url(kishore-v-kgH64ekcq4I-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+i{
+    font-size: 18px;
+}
+
+.input-form{
+    background-color: white;
+    padding: 3rem;
+    
+    border: 2px solid grey 
+    ;
+    border-radius: 32px;
+    font-family: "Mukta", sans-serif;
+    margin-top: 10rem;
+    
+
+}
+
+.container .input-form{
+    margin-bottom: 10rem;
+}
+
+
+.inner-input-form{
+    border: 1px  black;
+    padding: 0rem;
+    border-radius: 32px;
+}
+
+.input-form h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    
+
+}
+
+.display-5{
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    text-shadow: 2px 2px black;
+    padding: 10px;
+    font-size: 55px;
+}

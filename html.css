@@ -1,0 +1,28 @@
+body{
+    
+}
+
+.card-container{
+    margin-top: 12%;
+}
+
+
+.inner-image{
+    padding: 10px;
+    border-radius: 22px;
+}
+
+.main-text{
+    font-size: 35px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.login-focus{
+    font-weight: bolder;
+    background-image:linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 91.1%);
+    padding: px;
+    border-radius: 12px;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
