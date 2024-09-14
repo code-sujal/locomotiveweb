@@ -4,6 +4,10 @@
     margin-left: px;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
 header .p-3{
     color: black;
 }
@@ -18,6 +22,8 @@ header .p-3{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+
 }
 
 i{
@@ -61,4 +67,103 @@ i{
     text-shadow: 2px 2px black;
     padding: 10px;
     font-size: 55px;
+}
+
+.h1-suggest{
+    font-size: 42px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+
+}
+
+video{
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+video:hover{
+    transform: scale(1.05);
+}
+
+.card{
+    border-radius: 12px;
+    background-color: #141414;
+    border: transparent;
+    
+}
+
+
+.card-row2{
+    margin-top: 2rem;
+}
+
+.card-title{
+    font-size: 22px;
+    color: whitesmoke;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+
+
+}
+
+
+#travel-sugg{
+    margin-top: 3rem;
+}
+
+.card-head{
+    margin-bottom: 8rem;
+}
+
+.h1-suggest{
+}
+
+.card-head .p-suggest{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    margin-top: 2rem;
+    font-weight: bold;
+
+}
+
+.head-suggest{
+    background-image:radial-gradient(circle at 10% 20%, rgb(255, 19, 120) 0%, rgb(0, 0, 0) 90.5%);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.card-text{
+    color: #E2DFD2;
+    font-family: "Josefin Sans", sans-serif;
+    
+
+}
+
+.card-body .card-title:hover{
+    background-image:radial-gradient(circle at 10% 20%, rgb(255, 19, 120) 0%, rgb(0, 0, 0) 90.5%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: ease-in-out,0.5s;
+}
+
+.popular-travels{
+    background-color:#E2DFD2;
+    padding: 50px;
+    margin-top: 5rem;
+    border-radius: 32px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Mukta", sans-serif;
+
+}
+
+.discount-head{
+color: red;    
+
 }
