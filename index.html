@@ -63,7 +63,7 @@
         
                 <div class="text-end">
                   <button type="button" style="font-size: 15px;" class="btn btn-outline-light me-2"><a href="login.html" target="_blank" style="text-decoration: none;">Login</a></button>
-                  <button type="button" style="font-size: 15px;" class="btn btn-warning"><i class='bx bxs-crown' style="font-size: 12px;"></i> Go Premium</button>                </div>
+                  <button type="button" style="font-size: 15px;" class="btn btn-warning"><i class='bx bxs-crown' style="font-size: 12px;"></i> <a href="#premium-section">Go Premium</a></button>                </div>
               </div>
             </div>
           </header>
@@ -79,17 +79,17 @@
               <div class="row">
                 <div class="col ui search">
                   <h1 style="font-size: 25px; color: black;" class="from-to">From</h1>
-                  <input type="text" class="form-control prompt" placeholder="Origin station" aria-label="First name">
+                  <input type="text" class="form-control prompt" id="origin" placeholder="Origin station" aria-label="First name">
                   
                   
                 </div>
                 <div class="col ui search">
                   <h1 style="font-size: 25px; color: black;" class="from-to" >To</h1>
-                  <input type="text" class="form-control prompt" placeholder="Destination station" aria-label="First name">
+                  <input type="text" id="destination" class="form-control prompt" placeholder="Destination station" aria-label="First name">
                 </div>
                 <div class="col">
                   <h1 style="font-size: 25px; color: black;" class="from-to"> Departure</h1>
-                  <input type="date" class="form-control" placeholder="First name" aria-label="First name">
+                  <input type="date" class="form-control" id="departure" placeholder="First name" aria-label="First name">
                 </div>
                 <div class="col">
                   <h1 style="font-size: 25px; color: black;" class="from-to"> Return <small style="font-size: 12px;">(optional)</small></h1>
@@ -114,7 +114,6 @@
                   </div>
                 </div>
                 <div class="col" >
-                  <!-- Example split danger button -->
                   <div class="btn-group">
                     <button type="button" class="btn btn-dark">Opt for meal</button>
                     <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
@@ -131,7 +130,7 @@
                 </div>
                 <div class="row row3" style="margin-top: 3rem;">
                   <div class="col d-flex justify-content-end">
-                    <button type="button" class="btn btn-dark" style="font-size: 18px;">Search<i class='bx bx-right-arrow-alt'></i></button>
+                    <button type="button" class="btn btn-dark" id="searchBtn" style="font-size: 18px;">Search<i class='bx bx-right-arrow-alt'></i></button>
                   </div>
                 </div>
               </div>
@@ -141,106 +140,221 @@
           <br><br>
     </div>
 
-    <div class= "container popular-travels">
-      <section id="travel-sugg">
-        <div class="card-head">
-          <h1 class="h1-suggest"><span class="head-suggest">Locomotive's Suggested</span> Travel Destinations</h1>
-        <center><p class="p-suggest">The best travel destinations designed for you and your loved ones!</p></center>
-        </div>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <video src="delhivdo.mp4" controls class="card-img-top"  loop muted></video>
-                <div class="card-body">
-                  <h5 class="card-title">Munnar</h5>
-                  <p class="card-text">Munnar, Kerala, is a paradise of lush green tea plantations, misty waterfalls, and serene lakes, offering breathtaking views of the Western Ghats. Its pristine valleys and exotic flora and fauna make it a must-visit destination for nature.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text" style="color: wheat; font-weight: bold;font-size: 12px;font-weight: bold;">Esimated Travel cost : ₹7,000-₹12,000 <span class="badge text-bg-danger" style="font-size: 12px;margin-left: 5px;">Must Visit</span> </small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <video src="varanasivdo.mp4" controls="hidden" class="card-img-top"  loop muted></video>
-                <div class="card-body">
-                  <h5 class="card-title">Varanasi</h5>
-                  <p class="card-text">Varanasi, also known as Kashi, is a city of spiritual and cultural significance. With its sacred Ganges River and ancient temples, it’s a place where history and spirituality blend beautifully.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text"style="color: wheat; font-weight: bold;font-weight: bold;font-size: 12px;">Estimated Travel cost : ₹6,000-₹9,000<span class="badge text-bg-warning" style="font-size: 12px;margin-left: 5px;">Spiritual</span><span class="badge text-bg-success" style="font-size: 12px;margin-left: 1px;">Economical</span></small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <video src="mumbaivdo.mp4" controls="hidden" class="card-img-top"  loop muted></video>
-                <div class="card-body">
-                  <h5 class="card-title">Mumbai</h5>
-                  <p class="card-text">Mumbai, the city that never sleeps, is a vibrant blend of cultures and lifestyles. From the iconic Gateway of India to the bustling streets of Colaba, it offers a unique mix of history, modernity, and endless energy.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹10,000-₹15,000<span class="badge text-bg-primary"style="font-size: 12px;margin-left: 5px;">Popular</span></small>
-                </div>
-              </div>
-            </div>
+    <div class="explore-more">
+      <div class= "container popular-travels">
+        <section id="travel-sugg">
+          <div class="card-head">
+            <h1 class="h1-suggest"><span class="head-suggest">Locomotive's Suggested</span> Travel Destinations</h1>
+          <center><p class="p-suggest">The best travel destinations designed for you and your loved ones!</p></center>
           </div>
-          <div class="card-row2">
+          <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
               <div class="col">
-                <div class="card h-100">
-                  <video src="jaipurvdo.mp4" controls="hidden" class="card-img-top"  loop muted></video>
-                  <div class="card-body">
-                    <h5 class="card-title">Jaipur</h5>
-                    <p class="card-text">Jaipur, the Pink City, enchants with its regal palaces and vibrant architecture, where every street is bathed in hues of history and culture. From the majestic Amer Fort to the bustling bazaars, the city's timeless charm captures the heart of all who visit.</p>
+                <div class="card travel-card   h-100">
+                  <img src="munnar.webp" class="card-img-top" alt="">
+                  <div class="card-body ">
+                    <h5 class="card-title">Munnar</h5>
+                    <p class="card-text">Munnar, Kerala, is a paradise of lush green tea plantations, misty waterfalls, and serene lakes, offering breathtaking views of the Western Ghats. Its pristine valleys and exotic flora and fauna make it a must-visit destination for nature.</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text"style=" color: wheat; font-weight: bold;" style="font-size: 12px;">Estimated Travel cost : ₹6,000-₹10,000<span class="badge text-bg-success" style="font-size: 12px;margin-left: 5px;" >Economical</span></small>
+                    <small class="text" style="color: wheat; font-weight: bold;font-size: 12px;font-weight: bold;">Esimated Travel cost : ₹7,000-₹12,000 <span class="badge text-bg-danger" style="font-size: 12px;margin-left: 5px;">Must Visit</span> </small>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
-                  <video preload="metadata" src="goavdo.mp4" controls="hidden"  class="card-img-top"  loop muted></video>
-                  <div class="card-body">
-                    <h5 class="card-title">Goa</h5>
-                    <p class="card-text">Goa, with its sun-kissed beaches and lively nightlife, is a tropical paradise where every sunset feels magical. Its blend of Portuguese heritage and vibrant culture makes it a haven for both relaxation and adventure.</p>
+                <div class="card travel-card h-100">
+                  <img src="varanasi.webp" class="card-img-top" alt="">
+                  <div class="card-body ">
+                    <h5 class="card-title">Varanasi</h5>
+                    <p class="card-text">Varanasi, also known as Kashi, is a city of spiritual and cultural significance. With its sacred Ganges River and ancient temples, it’s a place where history and spirituality blend beautifully.</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹8,000-₹12,000<span class="badge text-bg-primary"style="font-size: 12px;margin-left: 5px;">Popular</span></small>
+                    <small class="text"style="color: wheat; font-weight: bold;font-weight: bold;font-size: 12px;">Estimated Travel cost : ₹6,000-₹9,000<span class="badge text-bg-warning" style="font-size: 12px;margin-left: 5px;">Spiritual</span><span class="badge text-bg-success" style="font-size: 12px;margin-left: 1px;">Economical</span></small>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
-                  <video preload="metadata" src="rshkshvdo.mp4" controls="hidden"  class="card-img-top"  loop muted></video>
-                  <div class="card-body">
-                    <h5 class="card-title">Rishikesh</h5>
-                    <p class="card-text">Rishikesh, nestled along the banks of the sacred Ganges, is a serene haven for yoga, meditation, and spiritual seekers. Surrounded by the majestic Himalayas, it's also an adventure hub, offering thrilling experiences like river rafting and trekking.</p>
+                <div class="card travel-card h-100">
+                  <img src="mumbai.jpg" class="card-img-top" alt="">
+                  <div class="card-body ">
+                    <h5 class="card-title">Mumbai</h5>
+                    <p class="card-text">Mumbai, the city that never sleeps, is a vibrant blend of cultures and lifestyles. From the iconic Gateway of India to the bustling streets of Colaba, it offers a unique mix of history, modernity, and endless energy.</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹6,000-₹10,000<span class="badge text-bg-warning" style="font-size: 12px;margin-left: 5px;">Spiritual</span></small>
+                    <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹10,000-₹15,000<span class="badge text-bg-primary"style="font-size: 12px;margin-left: 5px;">Popular</span></small>
                   </div>
                 </div>
               </div>
             </div>
-              <div class="card-row3 d-flex justify-content-center" style="margin-top: 3rem;font-size: 22px;padding: 22px;">
-                <button type="button" class="btn btn-outline-dark" style="margin-right: 10px;"><a href="construction.html">Explore More</a></button>
-                <button type="button" class="btn btn-dark"><a href="">Book Tickets</a></button>
+            <div class="card-row2">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card travel-card h-100">
+                    <img src="jaipur.jpg" class="card-img-top" alt="">
+                    <div class="card-body ">
+                      <h5 class="card-title">Jaipur</h5>
+                      <p class="card-text">Jaipur, the Pink City, enchants with its regal palaces and vibrant architecture, where every street is bathed in hues of history and culture. From the majestic Amer Fort to the bustling bazaars, the city's timeless charm captures the heart of all who visit.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text"style=" color: wheat; font-weight: bold;" style="font-size: 12px;">Estimated Travel cost : ₹6,000-₹10,000<span class="badge text-bg-success" style="font-size: 12px;margin-left: 5px;" >Economical</span></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card travel-card h-100">
+                    <img src="goavdo.webp" class="card-img-top" alt="">
+                    <div class="card-body ">
+                      <h5 class="card-title">Goa</h5>
+                      <p class="card-text">Goa, with its sun-kissed beaches and lively nightlife, is a tropical paradise where every sunset feels magical. Its blend of Portuguese heritage and vibrant culture makes it a haven for both relaxation and adventure.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹8,000-₹12,000<span class="badge text-bg-primary"style="font-size: 12px;margin-left: 5px;">Popular</span></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card travel-card h-100">
+                    <img src="rishikesh.jpg" class="card-img-top" alt="">
+                    <div class="card-body ">
+                      <h5 class="card-title">Rishikesh</h5>
+                      <p class="card-text">Rishikesh, nestled along the banks of the sacred Ganges, is a serene haven for yoga, meditation, and spiritual seekers. Surrounded by the majestic Himalayas, it's also an adventure hub, offering thrilling experiences like river rafting and trekking.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text"style="color: wheat; font-weight: bold;">Estimated Travel cost : ₹6,000-₹10,000<span class="badge text-bg-warning" style="font-size: 12px;margin-left: 5px;">Spiritual</span></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="card-row3 d-flex justify-content-center" style="margin-top: 3rem;font-size: 22px;padding: 22px;">
+                  <button type="button" class="btn btn-outline-dark" style="margin-right: 10px;"><a href="construction.html">Explore More</a></button>
+                  <button type="button" class="btn btn-dark"><a href="">Book Tickets</a></button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
 
-    <div class="discount container">
-      <section id="discount-section">
-        <div class="card-head">
-          <h1 class="h1-suggest"><span class="head-suggest">Travel More.Spend Less</span></h1>
-        <center><p class="p-suggest">Introducing Locomotive Coupons</p></center>
+    <div class="premium container">
+      <section id="premium-section">
+        <div class="card-head"></div>
+          <h1 class="h1-suggest premium-head"><span class="head-suggest">Find the Perfect Plan for Your Travel Needs</span> </h1>
+        
         </div>
+        <main class="container premium-container" style=""> 
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                <div class="card-header py-3 text-bg-warning border-warning">
+                  <h4 class="my-0 fw-normal" style="font-weight: bold;">Free</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹0<small class="text-body-secondary fw-dark">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4" style="color: ; font-weight: bold;">
+                    <li>Can book up to 2 tickets per month.</li>
+                    <li>Random seat allocation.</li>
+                    <li>No refunds on cancellations.</li>
+                    <li>Basic customer support (response within 24 hours).</li>
+                    <br>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a href="login.html" style="text-decoration: none;" class="link-button">Sign up for free</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                <div class="card-header py-3 text-bg-warning border-warning">
+                  <h4 class="my-0 fw-normal" style="font-weight: bold;">Basic</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹159 <small style="color: grey;"><strike>₹259</strike> </small> <small class="text-body-secondary fw-dark">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4" style="color: black; font-weight: bold;">
+                    <li>Can book up to 10 tickets per month.</li>
+                    <li>Standard seat selection available (window, aisle).
+                    </li>
+                    <li>50% refund on cancellations up to 24 hours before departure.</li>
+                    <li>Priority support (response within 12 hours).</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                <div class="card-header py-3 text-bg-warning border-warning">
+                  <h4 class="my-0 fw-normal" style="font-weight: bold;">Premium</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">₹299 <small style="color: grey;"><strike>₹399</strike> </small> <small class="text-body-secondary fw-dark">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4" style="color: black; font-weight: bold;">
+                    <li>Unlimited ticket booking per month.</li>
+                    <li>Premium seat selection (priority seating, specific compartments).</li>
+                    <li>Full refund on cancellations up to 2 hours before departure.</li>
+                    <li>24/7 dedicated support with instant response.</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <h2 class="display-6 text-center mb-4" style="margin-top: 10rem;margin-bottom: 3rem;">Compare plans</h2>
+      
+          <div class="table-responsive">
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th style="width: 34%;"></th>
+                  <th style="width: 22%;">Free</th>
+                  <th style="width: 22%;">Basic</th>
+                  <th style="width: 22%;">Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">Ticket Booking</th>
+                  <td>✔</i></td>
+                  <td>✔</i></td>
+                  <td>✔</i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Refund</th>
+                  <td>❌</td>
+                  <td>✔</i></td>
+                  <td>✔</i></td>
+                </tr>
+              </tbody>
+      
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">Seat Selection</th>
+                  <td>❌</td>
+                  <td>✔</i></td>
+                  <td>✔</i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Food and Meals</th>
+                  <td>❌</td>
+                  <td>❌</td>
+                  <td>✔</i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Customer Care</th>
+                  <td>❌</td>
+                  <td>✔</i></td>
+                  <td>✔</i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">Luggage security</th>
+                  <td>❌</td>
+                  <td>❌</td>
+                  <td>✔</i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
       </section>
     </div>
 
@@ -314,5 +428,20 @@ $('.ui.search')
     }
   }
 
+
+  document.getElementById("searchBtn").addEventListener("click", function() {
+            // Get user inputs
+            const origin = document.getElementById("origin").value;
+            const destination = document.getElementById("destination").value;
+            const departure = document.getElementById("departure").value;
+
+
+            if (origin && destination && departure) {
+              window.location.href = `booking.html?origin=${origin}&destination=${destination}&departure=${departure}`;}
+              else{
+                alert("Hey Passenger,Please fill out the details to search")
+              }
+              
+  });
     </script>
 </html>

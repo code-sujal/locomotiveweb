@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!-- boxicons -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/> <!-- remixicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" href="final-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+
+    <script src="index.js"></script>
+
+</head>
+<style>
+    nav{
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .nav-container{
+        padding: 0.5rem;
+    }
+    .col-box{
+        padding: 1rem;
+        border: 0.2px solid black;
+        border-radius: 12px;
+    }
+    i{
+        font-size: 22px;
+        
+    }
+    .output-container{
+        margin-top: 3rem;
+    }
+    .origin{
+        margin-right: 8px;
+    }
+
+    .destination{
+        margin-right: 8px;
+    }
+
+    h5{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(66, 66, 66);
+    }
+    h2{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    .col-btn{
+        padding: 1rem;
+        border-radius: 12px;
+        
+    }
+    .searchButton{
+        margin-left: 8px;
+    }
+    button{
+    width: 50%;
+    padding: 1rem;
+    }
+
+    .table-container{
+        margin-top: 8rem;
+    }
+
+    .navbar-name{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 23px;
+    margin-left: px;
+}
+</style>
+<body>
+    <div class="nav-container container">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container d-flex justify-content-center">
+              <a class="navbar-brand" href="index.html">
+                <img src="final-logo.png" style="height: 43px ; width: 4rem;" alt="">
+            </a>
+            <span class="navbar-name d-flex justify-content-center" >Locomotive Train Tickets</span>
+            </div>
+          </nav>
+    </div>
+    <div class="output-container container">
+        <div class="row container">
+            <div class="col col-box bg-body-secondary origin">
+                <h5><i class="ri-train-fill" style="color: red;"></i> From</h5>
+                <h2 id="originDisplay"></h2>
+            </div>
+            <div class="col col-box bg-body-secondary destination">
+                <h5><i class="ri-train-fill" style="color: rgb(5, 196, 5);"></i> To</h5>
+                <h2 id="destinationDisplay"></h2>
+            </div>
+            <div class="col col-box bg-body-secondary departure">
+                <h5><i class="ri-calendar-schedule-fill" style="color: rgb(13, 180, 236);"></i> Departure Date</h5>
+                <h2 id="departureDisplay"></h2>
+            </div>
+            
+        </div>
+        <div class="row container">
+            <div class="col col-btn searchButton" style="margin-top: ;"></div>
+                <button type="button" onclick="randomTrainNumber();thirdACseat();secondACseat();firstACseat();sleeperSeat()" id="generateBtn" class="btn btn-dark">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container table-container">
+        <table class="table container">
+            <thead>
+                <tr>
+                    <th scope="col">Train No.</th>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">3A</th>
+                    <th scope="col">2A</th>
+                    <th scope="col">1A</th>
+                    <th scope="col">SL</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="trainNum">1</th>
+                    <td>Mahamana Express</td>
+                    <td class="thirdAC" >--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">2</th>
+                    <td>Rajdhani Express</td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Vande Bharat Express</td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Vivek Express</td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Sampark Kranti Express</td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Antyodaya Express
+                    </td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Suvidha Express
+                    </td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Uday Express
+                    </td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Maharajas’ Express
+                    </td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="trainNum">4</th>
+                    <td>Garib Rath Express
+                    </td>
+                    <td class="thirdAC">--</td>
+                    <td class="secondAC">--</td>
+                    <td class="firstAC">--</td>
+                    <td class="sleeper">--</td>
+                    <td><button class="btn btn-light"><a href="construction.html">Book Now</a></button></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    function getQueryParams(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const origin = getQueryParams('origin');
+        const destination = getQueryParams('destination');
+        const departure = getQueryParams('departure');
+
+        document.getElementById("originDisplay").textContent = origin;
+        document.getElementById("destinationDisplay").textContent = destination;
+        document.getElementById("departureDisplay").textContent = departure;
+
+
+
+        function randomTrainNumber(){
+            const trainNumber = document.querySelectorAll('.trainNum');
+        
+
+            trainNumber.forEach(function(trainNum) {
+                let max = 17000;
+                let min = 11000;
+                let randomNum = Math.floor(Math.random()*(max-min+1)+min)
+                trainNum.textContent = randomNum;     
+                   });
+        }
+
+        function thirdACseat(){
+            const thirdSeat = document.querySelectorAll('.thirdAC');
+        
+
+            thirdSeat.forEach(function(thirdAC) {
+                let max = 159;
+                let min = 0;
+                let randomNum3 = Math.floor(Math.random()*(max-min+1)+min)
+                thirdAC.textContent = randomNum3;     
+                   });
+        }
+
+        function secondACseat(){
+            const secondSeat = document.querySelectorAll('.secondAC');
+        
+
+            secondSeat.forEach(function(secondAC) {
+                let max = 58;
+                let min = 0;
+                let randomNum2 = Math.floor(Math.random()*(max-min+1)+min)
+                secondAC.textContent = randomNum2;     
+                   });
+        }
+
+        function firstACseat(){
+            const firstSeat = document.querySelectorAll('.firstAC');
+        
+
+            firstSeat.forEach(function(firstAC) {
+                let max = 20;
+                let min = 0;
+                let randomNum1 = Math.floor(Math.random()*(max-min+1)+min)
+                firstAC.textContent = randomNum1;     
+                   });
+        }
+        function sleeperSeat(){
+            const sleepSeat = document.querySelectorAll('.sleeper');
+        
+
+            sleepSeat.forEach(function(sleeper) {
+                let max = 200;
+                let min = 0;
+                let randomNums = Math.floor(Math.random()*(max-min+1)+min)
+                sleeper.textContent = randomNums;     
+                   });
+                }
+
+
+        document.getElementById('generateBtn').addEventListener("click",function(){
+            this.disabled=true;
+            this.textContent="Search Complete!"
+        })
+</script>
+</html>

@@ -5,7 +5,6 @@
 }
 
 *{
-    scroll-behavior: smooth;
 }
 
 header .p-3{
@@ -18,7 +17,7 @@ header .p-3{
 }
 
 .hero-section{
-    background-image: url(kishore-v-kgH64ekcq4I-unsplash.jpg);
+    background-image: url(kishore-v-kgH64ekcq4I-unsplash.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -77,16 +76,16 @@ i{
 
 }
 
-video{
+.card-img-top{
     transition: transform 0.3s ease;
     border-radius: 12px;
 }
 
-video:hover{
+img:hover{
     transform: scale(1.05);
 }
 
-.card{
+.travel-card{
     border-radius: 12px;
     background-color: #141414;
     border: transparent;
@@ -150,7 +149,7 @@ video:hover{
 
 .popular-travels{
     background-color:#E2DFD2;
-    padding: 50px;
+    padding: 30px;
     margin-top: 5rem;
     border-radius: 32px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -163,7 +162,45 @@ video:hover{
 
 }
 
-.discount-head{
-color: red;    
+.pricing-card-title{
+    color: black;
+}
 
+.link-button:hover{
+    color: white;
+}
+
+.display-6{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    background-image:radial-gradient(circle at 10% 20%, rgb(255, 19, 120) 0%, rgb(0, 0, 0) 90.5%);
+    -webkit-background-clip: text;
+    margin-bottom: 3rem;
+
+    color: transparent;
+
+}
+
+.fw-normal{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: px;
+}
+
+.premium-head{
+}
+
+.premium-container{
+    margin-top: 5rem;
+}
+
+.premium{
+    margin-top: 10rem;
+}
+
+.explore-more{
+    background-color: #141414;
+    padding: 1rem;
+    padding-bottom: 4rem;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
