@@ -4,8 +4,7 @@
     margin-left: px;
 }
 
-*{
-}
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css')
 
 header .p-3{
     color: black;
@@ -203,4 +202,49 @@ img:hover{
     padding-bottom: 4rem;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
+}
+
+.pnr-status{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Mukta", sans-serif;
+
+}
+
+.pnr-a:hover{
+    color: white;
+    transition: ease-in-out,0.3s;
+}
+
+.pnr-div{
+    width: 50px;
+}
+
+.new-badge{
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+.ticket-icon{
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.food-a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Mukta", sans-serif;
+}   
+
+.food-a:hover{
+    color: white;
+}
+
+.text-search{
+    font-family: "Mukta", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 }
