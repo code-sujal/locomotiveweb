@@ -47,8 +47,8 @@
     margin-top: 3rem;
 }
 .pnr-form{
-    width: 70%;
-    height: 5rem;
+    width: 50%;
+    height: 4rem;
 }
 
 .main-form{
@@ -98,6 +98,12 @@
     text-align: center;
 
 }
+.pnr-name{
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
 </style>
 <body>
     <div class="nav-container container">
@@ -111,20 +117,31 @@
       </nav>
 </div>
     <div class="main-form container">
-        <h1 class="pnr-head" >PNR Status and Enquiry</h1>
-        <form action="" id="pnrForm">
-            <div class="form-container container d-flex justify-content-center col-lg-12 col-md-12 col-sm-12">
-                <div class="ui action input pnr-form" id="pnrForm">
-                    <input type="number" placeholder="Enter 10 digit PNR..." id="pnrInput" style="font-size: 22px;text-align: center;font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="input-box" required maxlength="10">
-    
-                    <button type="submit" class="ui button pnr-btn" id="pnrSearchBtn" style="background-color: black; color: white; font-weight: bold; width: 9rem;">Check PNR</button>
-                  </div>
-        
+        <div class="row container">
+            <div class="col container head-container col-lg-12 col-md-12 col-sm-12">
+                <h1 class="pnr-head" >PNR Status and Enquiry</h1>
+
             </div>
-        </form>
+        </div>
+        <div class="row container form-row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" style="margin-right: 2rem;">
+            <form action="" id="pnrForm" class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+                <div class="form-container container d-flex justify-content-center col-lg-12 col-md-12 col-sm-12">
+                    <div class="ui action input pnr-form" id="pnrForm">
+                        <input type="number" placeholder="Enter 10 digit PNR..." id="pnrInput" style="font-size: 22px;text-align: center;font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="input-box" required maxlength="10">
+        
+                        <button type="submit" class="ui button pnr-btn" id="pnrSearchBtn" style="background-color: black; color: white; font-weight: bold; width: 9rem;">Check PNR</button>
+                      </div>
+            
+                </div>
+            </form>
+        </div>
     </div>
     <div class="status-container container">
-                <h1 class="pnr-head2">Your PNR details are below</h1>
+                <h1 class="pnr-head2">
+                    <a  class=" d-flex justify-content-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <img src="ticketimg.png" style="height: 30px ; width: 30px;margin-right: 5px;margin-bottom: 2px;" alt=""><span class="navbar-name pnr-name" style="">Your PNR details are below</span>
+                    </a>
+                </h1>
         
         <div class="details-conatiner container ">
             <div class="msg-container container d-flex justify-content-center"  id="pnrStatus" style="margin-top: 2rem;"></div>>
@@ -136,36 +153,34 @@
 </body>
 <script>
     document.getElementById('pnrForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
 
         var pnrInput = document.getElementById('pnrInput').value;
-        var statusMessage = document.getElementById('statusMessage'); // Target the status message
-        var pnrStatusDiv = document.getElementById('pnrStatus'); // Div for holding the message
+        var statusMessage = document.getElementById('statusMessage'); 
+        var pnrStatusDiv = document.getElementById('pnrStatus');
 
-        // Reset previous styles and messages
         pnrStatusDiv.classList.remove('success', 'failed');
 
-        // Validation for 10-digit PNR
         if (pnrInput.length !== 10 || isNaN(pnrInput)) {
             statusMessage.textContent = "Invalid PNR number. Please enter a valid 10-digit PNR.";
             pnrStatusDiv.classList.add('failed');
-            statusMessage.style.color = "red"; // Change color to red for invalid PNR
+            statusMessage.style.color = "red"; 
         } else {
-            // Generate random PNR status
+           
             var randomStatus = Math.random() > 0.5 ? 'CONFIRMED' : 'WAITING';
             statusMessage.textContent = "Your PNR status is, " + randomStatus;
 
-            // Change color based on the status
+            
             if (randomStatus === "CONFIRMED") {
                 pnrStatusDiv.classList.add('success');
-                statusMessage.style.color = "green"; // Set to green for confirmed
+                statusMessage.style.color = "green"; 
             } else {
                 pnrStatusDiv.classList.add('failed');
-                statusMessage.style.color = "red"; // Set to red for waiting
+                statusMessage.style.color = "red"; 
             }
         }
 
-        pnrStatusDiv.style.display = 'block'; // Ensure the div is visible
+        pnrStatusDiv.style.display = 'block';
 
         document.getElementById('pnrSearchBtn').addEventListener("click",function(){
             this.disabled=true;
