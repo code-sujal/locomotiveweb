@@ -248,3 +248,96 @@ img:hover{
     font-size: 15px;
     font-weight: bold;
 }
+
+.supporting-text{
+    text-align: center;
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.carousel {
+    width: 100%; 
+    overflow: hidden;
+    background-color: white;
+}
+
+.carousel-new{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+
+.carousel-track {
+    display: flex; 
+    width: max-content; 
+    animation: scroll 30s linear infinite; 
+}
+
+.carousel-way{
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+
+@keyframes slide{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.logo img{
+    width: 150px;
+    margin: 0 20px; 
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20%; 
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+
+.carousel::before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255,255,255,0),white);
+}
+
+.carousel::after{
+    right: 0;
+    background: linear-gradient(to right,rgba(255,255,255,0),white);
+
+}
+
+
+.rev-name{
+    font-size: 15px;
+}
+
+.icon-container{
+    color: rgb(255, 166, 0);
+}
+
+.card{
+    margin: 0 40px;
+}
