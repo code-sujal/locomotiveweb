@@ -256,7 +256,7 @@ img:hover{
 
 }
 
-.carousel {
+.neswp-carousel {
     width: 100%; 
     overflow: hidden;
     background-color: white;
@@ -306,8 +306,8 @@ img:hover{
     }
 }
 
-.carousel::before,
-.carousel::after {
+.newsp-carousel::before,
+.newsp-carousel::after {
     content: '';
     position: absolute;
     top: 0;
@@ -318,12 +318,12 @@ img:hover{
 }
 
 
-.carousel::before{
+.newsp-carousel::before{
     left: 0;
     background: linear-gradient(to left,rgba(255,255,255,0),white);
 }
 
-.carousel::after{
+.newsp-carousel::after{
     right: 0;
     background: linear-gradient(to right,rgba(255,255,255,0),white);
 
@@ -338,6 +338,27 @@ img:hover{
     color: rgb(255, 166, 0);
 }
 
-.card{
-    margin: 0 40px;
+.black-container{
+    background-color: #E2DFD2;
+    padding: 80px;
+    padding-bottom: 4rem;
+    border-radius: 32px;
+    margin-right: px;
+    margin-top: 5rem;
 }
+
+.footer-container{
+    margin-top: 5rem;
+    background-color: #141414;
+    padding: 80px;
+    padding-bottom: 0;
+    border-radius: 32px;
+    margin-right: px;
+    
+}   
+
+.footer-container h5{
+    color: white;
+    font-size: 15px;
+}
+
