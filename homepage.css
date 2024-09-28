@@ -362,3 +362,75 @@ img:hover{
     font-size: 15px;
 }
 
+.feature-head{
+    font-size: 32px;
+    text-align: center;
+}
+
+
+.feature-container{
+    background-color: #141414;
+    color: white;
+    border-radius: 32px;
+}
+
+.feature-span{
+    font-weight: bolder;
+    position: relative;
+}
+
+.feature-span:after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 4px;
+}
+
+.feature-text{
+    color:#acacac;
+}
+
+
+.ticket-icon:hover{
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.5s,ease-in-out;
+}   
+
+.end-text{
+    font-size: 2.5rem;
+    color: #777777;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+}
+
+.end-footer-text{
+    font-size: 2rem;
+    color: #acacac;
+    font-stretch:expanded;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.credit-small{
+    font-size: 1rem;
+    color: #777777;
+}
+
+.social-icon:hover{
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.5s,ease-in-out;
+}
+
+.end-text:hover{
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.5s,ease-in;
+
+}
