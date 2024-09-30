@@ -1,0 +1,244 @@
+.navbar-name{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.dot-span{
+    background-image:linear-gradient(to right, #FF6B6B, #FFD93D); 
+    color: transparent;
+    -webkit-background-clip:text ;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+header{
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    padding: 2rem;
+
+}
+
+.Locomotive{
+    font-family: "Josefin Sans", sans-serif;
+    
+
+}
+
+.nav-head{
+    text-align: center;
+}
+
+.link-container{
+    color:#E2DFD2;
+}
+
+.nav-opt{
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-opt:hover{
+    color: white;
+}
+
+.nav-opt::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px; 
+    background: linear-gradient(90deg, #FF6B6B, #FFD93D); 
+    transform: scaleX(0);
+    transition: transform 0.3s ease; 
+    transform-origin: center;
+}
+
+.nav-opt:hover::after {
+    transform: scaleX(1); 
+}
+
+.nav-cart{
+    font-size: 22px;
+}
+
+.nav-cart:hover{
+    background-image:  linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.hero-head{
+    font-family: "Playwrite DE Grund", cursive;
+    line-height: 1.5;
+    color: white;
+}
+
+.nav-p{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 2rem;
+    color: rgb(231, 231, 231);
+
+}
+
+.pnr-container{
+    position: relative;
+    display: inline-block;
+}
+
+.pnr-container i{
+    position: absolute;
+    left: 20px;
+    top: 15%;
+    font-size: 22px;
+    background-image:  linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    
+}
+
+
+.pnr-container ::placeholder{
+    text-align: center;
+}
+
+.pnr-container input{
+    text-align: center;
+}
+
+.h1-suggest{
+    font-size: 34px;
+    text-align: center;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+
+}
+
+
+
+.foodplate{
+    width: 300px;
+    height: 300px;
+    right: 300px;
+}
+
+.explore-food{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    padding-top: 2rem;
+    color: #777777;
+    font-weight: bold;
+    
+}
+
+.food-img{
+    width: 150px;
+    height: 200px;
+}
+
+.food-img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out,0.5s;
+
+}
+
+.food-name{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.food-card{
+    margin: 0 0px;
+}
+
+.food-details{
+    margin-top: 2rem;
+
+}
+
+.more-food-name{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #777777;
+}
+
+.hot-text{
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 10px;
+    border-radius: 22px;
+}
+
+.carousel-container {
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.carousel-container h2 {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.food-item {
+    min-width: 150px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.food-item h3 {
+    margin-top: 10px;
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 15px;
+    margin-top: 2rem;
+}
+
+
+
+
+
