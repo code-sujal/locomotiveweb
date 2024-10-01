@@ -47,6 +47,10 @@
 }
 </style>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
 <div class="gradient-wrapper">
   <div class="gradient-body">
     <div class="navbar-container container">
@@ -60,10 +64,8 @@
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 link-container text-body-white">
             <li><a href="#restraunt" class="nav-opt px-2 ">Restaurants</a></li>
-            <li><a href="#" class="nav-opt px-2">Offers</a></li>
-            <li><a href="#" class="nav-opt px-2">Services</a></li>
-            <li><a href="#" class="nav-opt px-2">Policy</a></li>
-            <li><a href="#" class="nav-opt px-2">About</a></li>
+            <li><a href="#" class="nav-opt px-2">HOT Snacks</a></li>
+            <li><a href="#" class="nav-opt px-2">Food from states</a></li>
           </ul>
     
           <div class="col-md-3 text-end">
@@ -101,8 +103,8 @@
                 <center><p class="explore-food">Explore popular food cuisines</p></center>
             </div>
 
-            <div class="card-group" style="margin-top: 8rem;">
-              <div class="card food-card" style="width: 25rem;">
+            <div class="card-group  " style="margin-top: 8rem;">
+              <div class="card food-card" style="width: 27rem;">
                 <img src="dosa.png" class="card-img-top food-img" alt="...">
                 <div class="card-body food-details">
                   <h5 class="card-title food-name">Delighting Indian Breakfast</h5>
@@ -111,10 +113,10 @@
                     Dosa,
                     Upma,
                     Aloo Paratha and more</p>
-                  <a href="#" class="btn menu-btn btn-dark" style="margin-top: 3rem;">Order Breakfast</a>
+                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 3rem;">Order Breakfast</a></center>
                 </div>
               </div>
-              <div class="card food-card" style="width: 25rem;">
+              <div class="card food-card" style="width: 27rem;">
                 <img src="rajmachawal.jpg" class="card-img-top food-img rajma-chawal" alt="...">
                 <div class="card-body food-details">
                   <h5 class="card-title food-name">Comforting Lunchmeals</h5>
@@ -123,10 +125,10 @@
                     Dal Bhat,
                     Rajma Chawal,
                     Paneer Butter Masala with Roti and many more</p>
-                  <a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Lunch</a>
+                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Lunch</a></center>
                 </div>
               </div>
-              <div class="card food-card" style="width: 25rem;">
+              <div class="card food-card" style="width: 27rem;">
                 <img src="dinner.png" class="card-img-top food-img" alt="...">
                 <div class="card-body food-details">
                   <h5 class="card-title food-name">Royal Dinner Platters</h5>
@@ -135,7 +137,7 @@
                     Palak Paneer,
                     Vegetable Pulao,
                     Chana Masala and many more</p>
-                  <a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Dinner</a>
+                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Dinner</a></center>
                 </div>
               </div>
             </div>
@@ -145,7 +147,7 @@
         <div class="hot-food container">
           <section id="hot">
             <div class="card-head" style="margin-top: 8rem;"></div>
-              <h1 class="h1-suggest"><span class="head-suggest">New Arrivals on MealMonkey</h1>
+              <h1 class="h1-suggest"><span class="head-suggest"><span><i class="ri-fire-line fire-icon"></i></span> New Arrivals on MealMonkey</h1>
                 <center><p class="explore-food">Order some really <span class="hot-text" style="color: black;">Hot Snacks</span>  at your seat</p></center>
             </div>
             <div class="carousel-container" style="margin-top: 5rem;">
@@ -153,31 +155,72 @@
                   <div class="food-item">
                     <img src="pizza.png" class="snack-img" alt="">
                     <h3>Pizza</h3>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Pizza" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
                   </div>
                   <div class="food-item">
                     <img src="burger.png" class="snack-img" alt="">
                     <h3>Burger</h3>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Burger" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
                   </div>
                   <div class="food-item">
                     <img src="frenchfries.png" class="snack-img" alt="">
                     <h3>Frenchfries</h3>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Frenchfries" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
                   </div>
                   <div class="food-item">
                     <img src="vadapav.png" class="snack-img" alt="">
                     <h3>Bombay Vadapav</h3>
-                              </div>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Bombay Vadapav" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
+                  </div>
                   <div class="food-item">
                     <img src="wraps.png" class="snack-img" alt="">
                     <h3>Wraps</h3>
-                              </div>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Wraps" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
+                  </div>
                   <div class="food-item">
                     <img src="chat.png" class="snack-img" alt="">
-                    <h3>Bnarasi Chaat</h3>
-                              </div>
+                    <h3>Banarasi Chaat</h3>
+                    <div class="cta-btns mt-5 ">
+                      <button type="button" class="btn btn-dark">Add to cart</button>
+                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Banarasi Chaat" data-bs-content="
+                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
+                    </div>
+                    
+                  </div>
               </div>
           </div>
            
           </section>
         </div>
 </body>
+
+<script>
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
 </html>
