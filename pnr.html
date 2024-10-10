@@ -53,7 +53,8 @@
 
 .main-form{
     background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    padding: 5rem;
+    padding: 4rem;
+    padding-bottom: rem;
     border-top-left-radius: 32px;
     border-top-right-radius:32px ;
 }
@@ -104,6 +105,26 @@
     color: transparent;
     font-weight: bold;
 }
+.feature-text{
+    color:#acacac;
+}
+.end-footer-text{
+    font-size: 2rem;
+    color: #acacac;
+    font-stretch:expanded;
+    font-style: italic;
+    font-weight: bold;
+}
+.end-text{
+    font-size: 2.5rem;
+    color: #777777;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+}
+.credit-small{
+    font-size: 1rem;
+    color: #777777;
+}
 </style>
 <body>
     <div class="nav-container container">
@@ -123,14 +144,17 @@
 
             </div>
         </div>
-        <div class="row container form-row col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center" style="margin-right: 2rem;">
-            <form action="" id="pnrForm" class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-                <div class="form-container container d-flex justify-content-center col-lg-12 col-md-12 col-sm-12">
-                    <div class="ui action input pnr-form" id="pnrForm">
-                        <input type="number" placeholder="Enter 10 digit PNR..." id="pnrInput" style="font-size: 22px;text-align: center;font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="input-box" required maxlength="10">
-        
-                        <button type="submit" class="ui button pnr-btn" id="pnrSearchBtn" style="background-color: black; color: white; font-weight: bold; width: 9rem;">Check PNR</button>
+        <div class="row container form-row  d-flex justify-content-center" style="margin-right: 2rem;">
+            <form action="" id="pnrForm" class=" d-flex justify-content-center">
+                <div class="form-container container d-flex justify-content-center ">
+                    <div class=" input pnr-form" id="pnrForm">
+                        <input class="form-control-lg form-control" style="width: 100%;" type="tel" maxlength="10" name="" id="pnrInput"placeholder="Enter your 10 digit PNR...">
+                
+                        <center>
+                            <button type="submit" class="ui button pnr-btn mt-3" id="pnrSearchBtn" style="background-color: black; color: white; font-weight: bold; width: 9rem;">Check PNR</button>
+                        </center>
                       </div>
+                        
             
                 </div>
             </form>
@@ -149,6 +173,32 @@
             
             </div>
         </div>
+    </div>
+    <div class="footer-text container">
+        <div class="col-sm-9 p-3 container d-flex" style="margin-top: 8rem;padding-right: 0;">
+          <h1 class="end-text container" style="padding-right: 0;"><em>Locomotive</em></h1>
+        </div>
+        
+        <div class="col-sm-9 p-3 ">
+          <h2 class="end-footer-text d-flex">"Where journeys start on time, even if the train doesn’t!"</h2><br>
+          <small class="credit-small"><em>A webpage designed and developed by <b>Sujal Sharma</b></em></small>
+        </div>
+      </div>
+    <div class="footer-container mt-20 container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary"><b>© 2024 Locomotive</b></p>
+        
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="final-logo.png" style="height: 43px ; width: 4rem;" alt="">
+
+            </a>
+        
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+              <li class="nav-item"><a href="pnr.html" class="nav-link px-2 text-body-secondary">PNR Status</a></li>
+              <li class="nav-item"><a href="orderfood.html" class="nav-link px-2 text-body-secondary">Order food </a></li>
+            </ul>
+          </footer>
     </div>
 </body>
 <script>

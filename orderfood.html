@@ -34,7 +34,7 @@
 </head>
 <style>
 .gradient-body{
-  background-image: url(blurfood.jpg);
+  background-image: url(foodbg.jpg);
   background-size: cover;
   z-index: -1;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@
     <div class="navbar-container container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom text-bg-dark">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-white text-decoration-none">
+            <a href="/" class="d-inline-flex link-body-white text-decoration-none nav-name">
               <span class="navbar-name" style="">Meal<span class="dot-span">Monkey</span>.</span>
 
             </a>
@@ -64,16 +64,19 @@
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 link-container text-body-white">
             <li><a href="#restraunt" class="nav-opt px-2 ">Restaurants</a></li>
-            <li><a href="#" class="nav-opt px-2">HOT Snacks</a></li>
-            <li><a href="#" class="nav-opt px-2">Food from states</a></li>
+            <li><a href="#hot" class="nav-opt px-2">HOT Snacks</a></li>
+            <li><a href="#menu" class="nav-opt px-2">Menu</a></li>
           </ul>
     
           <div class="col-md-3 text-end">
-            <a href="" class="nav-cart"><i class="ri-shopping-bag-line"></i></a>
+            <button class="btn btn btn-outline-light position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+              <i class="ri-shopping-bag-line"></i> View Cart
+            </button>
+            
           </div>
         </header>    
       </div>
-      <div class="hero-container container">
+      <div class="hero-container container" id="home">
 
         <div class="px-4 py-5 my-5 text-center">
           <img class="d-block mx-auto mb-4" src="navMM.png" alt="" width="100" height="100">
@@ -99,128 +102,558 @@
         <div class="restaurant-container container" style="margin-top: 5rem;">
           <section id="restraunt">
             <div class="card-head">
-              <h1 class="h1-suggest"><span class="head-suggest">Order from 20+ trusted restaurants</h1>
+              <h1 class="h1-suggest" style="color: rgb(216, 216, 216);"><span class="head-suggest">Order from 20+ trusted restaurants</h1>
                 <center><p class="explore-food">Explore popular food cuisines</p></center>
             </div>
 
-            <div class="card-group  " style="margin-top: 8rem;">
-              <div class="card food-card" style="width: 27rem;">
-                <img src="dosa.png" class="card-img-top food-img" alt="...">
-                <div class="card-body food-details">
-                  <h5 class="card-title food-name">Delighting Indian Breakfast</h5>
-                  <p class="card-text more-food-name">Poha,
-                    Idli,
-                    Dosa,
-                    Upma,
-                    Aloo Paratha and more</p>
-                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 3rem;">Order Breakfast</a></center>
-                </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4 meal-container" style="margin-top: 5rem;">
+              <div class="col">
+                <div class="card food-card   h-100">
+                  <img src="dosa.png" class="card-img-top food-img" alt="...">
+                  <div class="card-body food-details">
+                    <h5 class="card-title food-name">Delighting Indian Breakfast</h5>
+                    <p class="card-text more-food-name">Poha,
+                      Idli,
+                      Dosa,
+                      Upma,
+                      Aloo Paratha and more</p>
+                    <center><a href="construction.html" class="btn menu-btn btn-dark" style="margin-top: 3rem;">Order Breakfast</a></center>
+                  </div>
+          </div>
               </div>
-              <div class="card food-card" style="width: 27rem;">
-                <img src="rajmachawal.jpg" class="card-img-top food-img rajma-chawal" alt="...">
-                <div class="card-body food-details">
-                  <h5 class="card-title food-name">Comforting Lunchmeals</h5>
-                  <p class="card-text more-food-name">Biryani,
-                    Thali,
-                    Dal Bhat,
-                    Rajma Chawal,
-                    Paneer Butter Masala with Roti and many more</p>
-                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Lunch</a></center>
-                </div>
+              <div class="col">
+                <div class="card food-card h-100">
+                  <img src="rajmachawal.jpg" class="card-img-top food-img rajma-chawal" alt="...">
+                  <div class="card-body food-details">
+                    <h5 class="card-title food-name">Comforting Lunchmeals</h5>
+                    <p class="card-text more-food-name">Biryani,
+                      Thali,
+                      Dal Bhat,
+                      Rajma Chawal,
+                      Paneer Butter Masala with Roti and many more</p>
+                    <center><a href="construction.html" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Lunch</a></center>
+                  </div>
+          </div>
               </div>
-              <div class="card food-card" style="width: 27rem;">
-                <img src="dinner.png" class="card-img-top food-img" alt="...">
-                <div class="card-body food-details">
-                  <h5 class="card-title food-name">Royal Dinner Platters</h5>
-                  <p class="card-text more-food-name">Vegetable Curry with Roti,
-                    Aloo Gobi,
-                    Palak Paneer,
-                    Vegetable Pulao,
-                    Chana Masala and many more</p>
-                  <center><a href="#" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Dinner</a></center>
-                </div>
+              <div class="col">
+                <div class="card food-card h-100">
+                  <img src="dinner.png" class="card-img-top food-img" alt="...">
+                  <div class="card-body food-details">
+                    <h5 class="card-title food-name">Royal Dinner Platters</h5>
+                    <p class="card-text more-food-name">Vegetable Curry with Roti,
+                      Aloo Gobi,
+                      Palak Paneer,
+                      Vegetable Pulao,
+                      Chana Masala and many more</p>
+                    <center><a href="construction.html" class="btn menu-btn btn-dark" style="margin-top: 2rem;">Order Dinner</a></center>
+                  </div>
+          </div>
               </div>
             </div>
-          </section>
+                    </section>
 
         </div>
         <div class="hot-food container">
           <section id="hot">
-            <div class="card-head" style="margin-top: 8rem;"></div>
+              <div class="card-head" style="margin-top: 8rem;"></div>
               <h1 class="h1-suggest"><span class="head-suggest"><span><i class="ri-fire-line fire-icon"></i></span> New Arrivals on MealMonkey</h1>
-                <center><p class="explore-food">Order some really <span class="hot-text" style="color: black;">Hot Snacks</span>  at your seat</p></center>
-            </div>
-            <div class="carousel-container" style="margin-top: 5rem;">
+              <center><p class="explore-food">Order some really <span class="hot-text" style="color: black;">Hot Snacks</span> at your seat</p></center>
+          </section>
+          <div class="carousel-container" style="margin-top: 5rem;">
               <div class="carousel" id="food-carousel">
                   <div class="food-item">
-                    <img src="pizza.png" class="snack-img" alt="">
-                    <h3>Pizza</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Pizza" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="pizza.png" class="snack-img" alt="">
+                      <h3>Pizza</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Pizza" data-price="199">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="Pizza" data-bs-content="Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
                   <div class="food-item">
-                    <img src="burger.png" class="snack-img" alt="">
-                    <h3>Burger</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Burger" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="burger.png" class="snack-img" alt="">
+                      <h3>Burger</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Burger" data-price="89">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="Burger" data-bs-content="Calories: ~300-350 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
                   <div class="food-item">
-                    <img src="frenchfries.png" class="snack-img" alt="">
-                    <h3>Frenchfries</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Frenchfries" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="frenchfries.png" class="snack-img" alt="">
+                      <h3>French Fries</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="French Fries" data-price="119">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="French Fries" data-bs-content="Calories: ~300-400 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
                   <div class="food-item">
-                    <img src="vadapav.png" class="snack-img" alt="">
-                    <h3>Bombay Vadapav</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Bombay Vadapav" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="vadapav.png" class="snack-img" alt="">
+                      <h3>Bombay Vada Pav</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Bombay Vada Pav" data-price="49">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="Bombay Vada Pav" data-bs-content="Calories: ~150-200 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
                   <div class="food-item">
-                    <img src="wraps.png" class="snack-img" alt="">
-                    <h3>Wraps</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Wraps" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="wraps.png" class="snack-img" alt="">
+                      <h3>Wraps</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Wraps" data-price="79">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="Wraps" data-bs-content="Calories: ~250-350 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
                   <div class="food-item">
-                    <img src="chat.png" class="snack-img" alt="">
-                    <h3>Banarasi Chaat</h3>
-                    <div class="cta-btns mt-5 ">
-                      <button type="button" class="btn btn-dark">Add to cart</button>
-                      <button type="button" class="btn  btn-link mt-3" data-bs-toggle="popover" data-bs-title="Banarasi Chaat" data-bs-content="
-                      Calories: ~270-300 kcal" data-bs-placement="bottom">View calories</button>                      
-                    </div>
-                    
+                      <img src="chat.png" class="snack-img" alt="">
+                      <h3>Banarasi Chaat</h3>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Banarasi Chaat" data-price="99">Add to cart</button>
+                          <button type="button" class="btn btn-link mt-3" data-bs-toggle="popover" data-bs-title="Banarasi Chaat" data-bs-content="Calories: ~200-300 kcal" data-bs-placement="bottom">View calories</button>
+                      </div>
                   </div>
               </div>
           </div>
-           
+          
+      </div>              </div>
+          </div>
+            <div class="offcanvas-container container d-flex justify-content-center" style="margin-top: 3rem;">
+              <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                View cart
+              </button>
+              
+              <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="staticBackdropLabel">
+                    <a href="/" class="d-inline-flex link-body-white text-decoration-none">
+                      <span class="navbar-name" style="color: black;">Meal<span class="dot-span">Monkey</span>.</span>
+        
+                    </a>
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="position: relative;overflow: hidden;">
+                  <img src="trackOrderImg.webp" class="star-img" alt="">
+                  <div>
+                    <h3 class="offcanvas-cart"> Your Cart</h3>
+                    <div class="cart-items container">
+
+                    </div>
+                    <div id="cart" class="mt-5">
+                      <ul id="cart-items" class="list-group"></ul><br><br><br><br><br>
+                      <button id="total-price" type="button"  class="offcanvas-cart justify-content-center d-flex btn btn-success" style="text-align: center;margin-left: 35%;">Pay ₹0</button>                   </div>
+                  <div class="btn cta-btn pay-btn">
+                                     </div>
+                </div>
+                </div>
+              </div>
+               
+    
+            </div>
           </section>
         </div>
+
+        <div class="menu-container container">
+          <section id="menu">
+            <div class="card-head" style="margin-top: 8rem;"></div>
+              <h1 class="h1-suggest"><span class="head-suggest"><span><img class="d-block mx-auto mb-4" src="navMM.png" alt="" width="80" height="80">
+              </span> Whats on your mind?</h1>
+              <center><p class="explore-food">"Don’t just think it—let us deliver it! </p></center>
+
+          
+        </div>
+        <div class="recommended-name container">
+          <h1 class="recomm-text container" style="margin-top: 4rem;"><span class="bestseller-icon" style="font-size:27px ;"><i class="ri-sparkling-line"></i></span> Our Bestsellers...</h1>
+          <div class="hr-container container" style="margin-bottom: 5rem;margin-top: 1rem;"><hr style="text-align: left;"></div>
+
+          <div class="container food-item-container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4" style="position: relative; overflow: hidden;">
+
+                        <img src="Hunan Paneer Bowl.avif" class="img-fluid rounded-start dish-img" alt="..." style="height: 100%;    width: 100%;">
+
+                        <img src="star.webp" class="" alt="Overlay Image" style="position: absolute; top: 10px; left: 350px; width: 50px; height: 50px; z-index: 2;">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body bestseller-body">
+
+                          <h5 class="card-title dish-name">Hunan Paneer Bowl</h5>
+                          <p class="card-text"><span class="spicy" style="color: red;font-weight: bold;">(Spicy)</span> Paneer, Onion, Capsicum, tossed in Spicy & Savory Hunan Sauce With Choice Rice/ Noodle</p>
+                          <p class="card-text" style="margin-top: 8px;"><small class="" style="color: green ; font-size: 13px;"><i class="ri-star-s-fill"></i>4.3 <span class="text-body-secondary">(16)</span></small></p>
+                          <p class="price-tag " style="font-size: 17px;"><span class="actual-price text-body-secondary"><strike>₹369</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹149</span></span></p>
+                          <div class="cta-btns mt-4">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Hunan Paneer Bowl" data-price="149">Add to cart</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="Veg Chilli Garlic Noodles - Half (500 ml).avif" class="img-fluid rounded-start dish-img" alt="..." style="height: 100%;    width: 100%;">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title dish-name">Chilli Garlic Noodles</h5>
+                          <p class="card-text"><span class="spicy" style="color: red;font-weight: bold;"></span> Noodles tossed with carrot, capsicum & onion, flavored with chilli flakes, garlic & soy</p>
+                          <p class="card-text" style="margin-top: 8px;"><small class="" style="color: green ; font-size: 13px;"><i class="ri-star-s-fill"></i>4.1 <span class="text-body-secondary">(310)</span></small></p>
+                          <p class="price-tag " style="font-size: 17px;"><span class="actual-price text-body-secondary"><strike>₹279</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹149</span></span></p>
+                          <div class="cta-btns mt-4">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Veg Chilli Garlic Noodles" data-price="149">Add to cart</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="Paneer Delicious.avif" class="img-fluid rounded-start dish-img" alt="..." style="height: 200px;    width: 100%;">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title dish-name">Paneer Delicious</h5>
+                          <p class="card-text"><span class="spicy" style="color: red;font-weight: bold;">(Spicy)</span> Homemade paneer patty, cheddar cheese slice, iceberg lettuce, tomato, breaded onion rings</p>
+                          <p class="card-text" style="margin-top: 8px;"><small class="" style="color: green ; font-size: 13px;"><i class="ri-star-s-fill"></i>4.4 <span class="text-body-secondary">(164)</span></small></p>
+                          <p class="price-tag " style="font-size: 17px;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹199</span></span></p>
+                          <div class="cta-btns mt-4">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Paneer Delicious" data-price="199">Add to cart</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="Veg Manchurian Bowl.avif" class="img-fluid rounded-start dish-img" alt="..." style="height: 100%;    width: 100%;">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title dish-name">Veg Manchurian Bowl</h5>
+                          <p class="card-text"><span class="spicy" style="color: red;font-weight: bold;"></span> Peppery & Non Spicy) Mix veg fried fritters, onion and capsicum tossed</p>
+                          <p class="card-text" style="margin-top: 8px;"><small class="" style="color: green ; font-size: 13px;"><i class="ri-star-s-fill"></i>4.3 <span class="text-body-secondary">(76)</span></small></p>
+                          <p class="price-tag " style="font-size: 17px;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹129</span></span></p>
+                          <div class="cta-btns mt-4">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Veg Manchurian Bowl" data-price="129">Add to cart</button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>      </section>
+
+            <div class="recommended-name container" id="hubway">
+              <h1 class="recomm-text container" style="margin-top: 8rem;"><span class="bestseller-icon" style="font-size:27px ;"><i class='bx bxs-baguette'></i></span> HubWay Sandwiches..</h1>
+              <div class="hr-container container" style="margin-bottom: 5rem;margin-top: 1rem;"><hr style="text-align: left;"></div>
+    
+              <div class="container food-item-container">
+                <div class="carousel-container" style="margin-top: 5rem;">
+                  <div class="carousel" id="food-carousel">
+                      <div class="food-item">
+                          <img src="Veggie & Cheese Toastie.avif" class="snack-img" alt="">
+                          <h3>Veggie & Cheese Toastie</h3>
+                          <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹189</span></span></p>
+                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                                                    
+                          <div class="cta-btns mt-5">
+                              <button type="button" class="add-to-cart btn btn-dark" data-name="Veggie & Cheese Toastie" data-price="189">Add to cart</button>
+                          </div>
+                      </div>
+                      <div class="food-item">
+                        <img src="Corn & Peas Sandwich.png_compressed" class="snack-img" alt="">
+                        <h3>Corn & Peas Sandwich</h3>
+                        <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹289</span></span></p>                           <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                        <div class="cta-btns mt-5">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Corn & Peas Sandwich" data-price="289">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="food-item">
+                      <img src="Paneer Tikka Sandwich.avif" class="snack-img" alt="">
+                      <h3>Paneer Tikka Sandwich</h3>
+                      <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹129</span></span></p>                           <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Paneer Tikka Sandwich" data-price="129">Add to cart</button>
+                      </div>
+                  </div>
+                  <div class="food-item">
+                    <img src="Classic Veggie Craver.avif" class="snack-img" alt="">
+                    <h3>Classic Veggie Craver</h3>
+                    <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹119</span></span></p>
+                    <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                           
+                    <div class="cta-btns mt-5">
+                        <button type="button" class="add-to-cart btn btn-dark" data-name="Classic Veggie Craver" data-price="119">Add to cart</button>
+                    </div>
+                </div>
+                <div class="food-item">
+                  <img src="Chilli Bean Patty Sandwich.avif" class="snack-img" alt="">
+                  <h3>Chilli Bean Patty Sandwich</h3>
+                  <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹79</span></span></p>                            <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                  <div class="cta-btns mt-5">
+                      <button type="button" class="add-to-cart btn btn-dark" data-name="Chilli Bean Patty Sandwich" data-price="79">Add to cart</button>
+                  </div>
+              </div>
+              <div class="food-item">
+                <img src="Veg Shammi Sandwich.avif" class="snack-img" alt="">
+                <h3>Veg Shammi Sandwich</h3>
+                <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹179</span></span></p>                            <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                <div class="cta-btns mt-5">
+                    <button type="button" class="add-to-cart btn btn-dark" data-name="Veg Shammi Sandwich" data-price="179">Add to cart</button>
+                </div>
+            </div>
+            <div class="food-item">
+              <img src="Veggie Delite Sandwich.avif" class="snack-img" alt="">
+              <h3>Veggie Delite Sandwich</h3>
+              <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹279</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                             
+              <div class="cta-btns mt-5">
+                  <button type="button" class="add-to-cart btn btn-dark" data-name="Veggie Delite Sandwich" data-price="279">Add to cart</button>
+              </div>
+          </div>
+          <div class="food-item">
+            <img src="Aloo Patty Sandwich.avif" class="snack-img" alt="">
+            <h3>Aloo Patty Sandwich</h3>
+            <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹179</span></span></p>                             <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+            <div class="cta-btns mt-5">
+                <button type="button" class="add-to-cart btn btn-dark" data-name="Aloo Patty Sandwich" data-price="179">Add to cart</button>
+            </div>
+        </div>
+        <div class="food-item">
+          <img src="Bombay Grill Sandwich.avif" class="snack-img" alt="">
+          <h3>Bombay Grill Sandwich</h3>
+          <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹149</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+          <div class="cta-btns mt-5">
+              <button type="button" class="add-to-cart btn btn-dark" data-name="Bombay Grill Sandwich" data-price="149">Add to cart</button>
+          </div>
+      </div>
+      <div class="food-item">
+        <img src="Delhi Tikki Sandwich..avif" class="snack-img" alt="">
+        <h3>Delhi Tikki Sandwich</h3>
+        <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹179</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+        <div class="cta-btns mt-5">
+            <button type="button" class="add-to-cart btn btn-dark" data-name="Delhi Tikki Sandwich" data-price="179">Add to cart</button>
+        </div>
+    </div>
+
+                  </div>
+    
+
+
+                </div>      </section>
+                <div class="recommended-name container" id="drinks">
+                  <h1 class="recomm-text container" style="margin-top: 8rem;"><span class="bestseller-icon" style="font-size:27px ;"><i class="ri-drinks-2-fill"></i></span> Slurpy Shakes...</h1>
+                  <div class="hr-container container" style="margin-bottom: 5rem;margin-top: 1rem;"><hr style="text-align: left;"></div>
+        
+                  <div class="container food-item-container">
+                    <div class="carousel-container" style="margin-top: 5rem;">
+                      <div class="carousel" id="food-carousel">
+                          <div class="food-item">
+                              <img src="Mango Milkshake.avif" class="snack-img" alt="">
+                              <h3>Mango Milkshake</h3>
+                              <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹149</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹89</span></span></p>
+                              <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                                                        
+                              <div class="cta-btns mt-5">
+                                  <button type="button" class="add-to-cart btn btn-dark" data-name="Mango Milkshake" data-price="89">Add to cart</button>
+                              </div>
+                          </div>
+                          <div class="food-item">
+                            <img src="Cold coffee.avif" class="snack-img" alt="">
+                            <h3 class="" style="margin-bottom: 2.2rem;">Cold coffee</h3>
+                            <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹149</span></span></p>                           <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                            <div class="cta-btns mt-5">
+                                <button type="button" class="add-to-cart btn btn-dark" data-name="Cold coffee" data-price="149">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="food-item">
+                          <img src="Iced Signature Chocolate.avif" class="snack-img" alt="">
+                          <h3>Iced Signature Chocolate</h3>
+                          <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹129</span></span></p>                           <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                          <div class="cta-btns mt-5">
+                              <button type="button" class="add-to-cart btn btn-dark" data-name="Iced Signature Chocolate" data-price="129">Add to cart</button>
+                          </div>
+                      </div>
+                      <div class="food-item">
+                        <img src="Signature Cold Coffee (Spl).avif" class="snack-img" alt="">
+                        <h3>Signature Cold Coffee (Spl)</h3>
+                        <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹129</span></span></p>
+                        <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                               
+                        <div class="cta-btns mt-5">
+                            <button type="button" class="add-to-cart btn btn-dark" data-name="Signature Cold Coffee (Spl)" data-price="129">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="food-item">
+                      <img src="Hazelnut Cold Coffee.avif" class="snack-img" alt="">
+                      <h3>Hazelnut Cold Coffee</h3>
+                      <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹179</span></span></p>                            <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                      <div class="cta-btns mt-5">
+                          <button type="button" class="add-to-cart btn btn-dark" data-name="Hazelnut Cold Coffee" data-price="179">Add to cart</button>
+                      </div>
+                  </div>
+                  <div class="food-item">
+                    <img src="Brrrista Blast Cold Coffee.avif" class="snack-img" alt="">
+                    <h3>Brrrista Blast Cold Coffee</h3>
+                    <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹449</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹379</span></span></p>                            <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                    <div class="cta-btns mt-5">
+                        <button type="button" class="add-to-cart btn btn-dark" data-name="Veg Shammi Sandwich" data-price="379">Add to cart</button>
+                    </div>
+                </div>
+                <div class="food-item">
+                  <img src="Coffee Bubble Tea.avif" class="snack-img" alt="">
+                  <h3>Coffee Bubble Tea</h3>
+                  <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹179</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                                 
+                  <div class="cta-btns mt-5">
+                      <button type="button" class="add-to-cart btn btn-dark" data-name="Veggie Delite Sandwich" data-price="179">Add to cart</button>
+                  </div>
+              </div>
+              <div class="food-item">
+                <img src="Alphonso Thick Shake.avif" class="snack-img" alt="">
+                <h3>Alphonso Thick Shake</h3>
+                <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹349</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹129</span></span></p>                             <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+                <div class="cta-btns mt-5">
+                    <button type="button" class="add-to-cart btn btn-dark" data-name="Alphonso Thick Shake" data-price="129">Add to cart</button>
+                </div>
+            </div>
+            <div class="food-item">
+              <img src="Cappuccino.avif" class="snack-img" alt="">
+              <h3>Cappuccino</h3>
+              <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹249</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹79</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+              <div class="cta-btns mt-5">
+                  <button type="button" class="add-to-cart btn btn-dark" data-name="Cappuccino" data-price="79">Add to cart</button>
+              </div>
+          </div>
+          <div class="food-item">
+            <img src="Vanilla Classic Milkshake.avif" class="snack-img" alt="">
+            <h3>Vanilla Classic Milkshake</h3>
+            <p class="price-tag " style="font-size: 17px;margin-top: 1rem;"><span class="actual-price text-body-secondary"><strike>₹299</strike><span class="discounted-price text-body-secondary" style="font-weight: bold;margin-left: 5px;">₹279</span></span></p>                          <p class="disc-icon mt-3"><i class="ri-price-tag-3-fill" style="color: green;margin-right: 5px;font-size: 17px;" ></i><small>30% OFF USE <b class="price-tag-icon">TRYNEW</b></small></p>
+            <div class="cta-btns mt-5">
+                <button type="button" class="add-to-cart btn btn-dark" data-name="Vanilla Classic Milkshake" data-price="279">Add to cart</button>
+            </div>
+        </div>
+    
+                      </div>
+        
+    
+    
+                    </div>      </section>
+
+                    <div class="footer-text container">
+                      <div class="col-sm-9 p-3 container d-flex" style="margin-top: 8rem;padding-right: 0;">
+                        <h1 class="end-text container" style="padding-right: 0;"><em>MealMonkey</em></h1>
+                      </div>
+                      
+                      <div class="col-sm-9 p-3 ">
+                        <h2 class="end-footer-text d-flex">"On a long train ride? MealMonkey has meals that are more exciting than the guy telling his life story next to you—just don’t let him borrow your fries!"</h2><br>
+                        <small class="credit-small"><em>A webpage designed and developed by <b>Sujal Sharma</b></em></small>
+                      </div>
+                    </div>
+    
+                <div class="footer-container " style="margin-top: 10rem;">
+                  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"  style="width: 100%;">
+                    <div class="col mb-3">
+                      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                        <img class="d-block mx-auto mb-4" src="navMM.png" alt="" width="80" height="80">
+                      </a>
+                      <p class="text-body-black" style="text-align: center;">© 2024 MealMonkey Railway Catering</p>
+                      <p class="text-body" style="text-align: center;"><a href="https://code-sujal.github.io/locomotiveweb/" target="_blank" style="font-weight: bold;text-decoration: underline;color: blueviolet;"> A Locomotive Subsidiary</a></p>
+                    </div>
+                
+                    <div class="col mb-3">
+                
+                    </div>
+                
+                    <div class="col mb-3">
+                      <h5>Services</h5><br>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#restraunts" class="nav-link p-0 text-body-secondary">Restaurants</a></li>
+                        <li class="nav-item mb-2"><a href="#hot" class="nav-link p-0 text-body-secondary">Fresh Arrivals</a></li>
+                        <li class="nav-item mb-2"><a href="#hubway" class="nav-link p-0 text-body-secondary">HubWay Sandwiches</a></li>
+                        <li class="nav-item mb-2"><a href="#drinks" class="nav-link p-0 text-body-secondary">Slurpy Shakes</a></li>
+                      </ul>
+                    </div>
+                
+                    <div class="col mb-3">
+                      <h5>Locomotive Services</h5><br>
+                    
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://code-sujal.github.io/locomotiveweb/" class="nav-link p-0 text-body-secondary" target="_blank">Visit Locomotive</a></li>
+                        <li class="nav-item mb-2"><a href="https://code-sujal.github.io/locomotiveweb/" target="_blank" class="nav-link p-0 text-body-secondary">Book train tickets</a></li>
+                        <li class="nav-item mb-2"><a href="pnr.html" class="nav-link p-0 text-body-secondary">Check PNR Status</a></li>
+                        <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Order food</a></li>
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                      </ul>
+                    </div>
+                
+                    <div class="col mb-3">
+                      <h5>Developer Socials</h5><br>
+                      <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://www.instagram.com/abe_sujal/" class="nav-link p-0 text-body-secondary social-icon" style="font-size: 17px;margin-right: 5px;" target="_blank" ><i class="ri-instagram-fill"></i> <span style="margin-right: 5px;">Instagram</span> </a></li>
+                        
+                        <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/sujal-sharma-6a832a214?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoGXj7cq1RKeW9N8dzTdzcg%3D%3D" class="nav-link p-0 text-body-secondary social-icon" target="_blank" style="font-size: 17px;margin-right: 5px;" ><i class="ri-linkedin-fill"></i> <span style="margin-right: 5px;">LinkedIn</span></a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/code-sujal" class="nav-link p-0 text-body-secondary social-icon" style="font-size: 17px;margin-right: 5px;"target="_blank" ><i class="ri-github-fill"></i> <span style="margin-right: 5px;">Github</span></a></li>
+                        <li class="nav-item mb-2 mt-5" style="text-align: center;"><a class="nav-link p-0" style="color: black; font-weight: bold;"><i class="ri-code-s-slash-line" style="margin-right: 10px;font-size: 17px;color: rgba(255, 0, 0, 0.733);"></i>A website developed by Sujal Sharma</a></li>
+                      </ul>
+                    </div>
+                  </footer>
+                </div>
+    
 </body>
 
 <script>
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+
+
+let cart = [];
+    let totalPrice = 0;
+
+    function updateCart() {
+        const cartItemsElement = document.getElementById('cart-items');
+        cartItemsElement.innerHTML = ''; // Clear previous cart items
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.textContent = `${item.name} - ₹${item.price}`;
+            cartItemsElement.appendChild(listItem);
+        });
+        document.getElementById('total-price').textContent = `Pay ₹${totalPrice}`;
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+            cart.push({ name, price });
+            totalPrice += price;
+            updateCart();
+            alert(`Wohooo preparing ${name}!!...Click on view cart!`);
+        });
+    });
+
+
+
+
 </script>
 </html>
