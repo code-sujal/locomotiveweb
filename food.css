@@ -28,6 +28,15 @@ header{
 
 }
 
+.nav-name{
+    transition: transform 0.5s ease;
+}
+
+.nav-name:hover{
+    transform: rotate(-5deg);
+    transition: 0.5s,ease-in-out;
+}
+
 .nav-head{
     text-align: center;
 }
@@ -70,12 +79,7 @@ header{
     font-size: 22px;
 }
 
-.nav-cart:hover{
-    background-image:  linear-gradient(90deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    color: transparent;
-    
-}
+
 
 .hero-head{
     font-family: "Playwrite DE Grund", cursive;
@@ -163,6 +167,7 @@ header{
 
 .food-card{
     margin: 0 0px;
+    overflow: hidden;
 }
 
 .food-details{
@@ -247,4 +252,109 @@ header{
 }
 
 
+.restaurant-container{
+    background-color: #141414;
+    padding: 3rem;
+    padding-bottom: 8rem;
+    border-radius: 32px;
+}
 
+.offcanvas-cart{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#cart-items {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+#cart-items .cart-item {
+    margin-bottom: 10px;
+}
+
+.cart-btn{
+    font-size: 18px;
+}
+
+
+.recomm-text{
+    font-size: 17px;
+    text-align: start;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+}
+
+.dish-name{
+    font-size: 17px;
+    text-align: start;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+
+}
+
+.dish-img:hover{
+    transform: scale(1.1);
+    transition: ease-in-out,0.5s;
+}
+
+.price-tag-icon{
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: black;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.bestseller-icon{
+    background: rgb(255, 166, 0);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.footer-container{
+    background-color: #ecebe3;
+    padding: 1rem;
+    border-radius: 32px;
+}
+
+.social-icon{
+    font-size: 17px;
+}
+
+.star-img{
+    position: absolute;
+    top: 75%;  
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    width: 150%; 
+    height: auto; 
+    z-index: -1;
+    clip-path: inset(0 0% 0 0);
+    opacity: 0.9;
+}
+.parent-card{
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-text{
+    color:#acacac;
+}
+.end-footer-text{
+    font-size: 2rem;
+    color: #acacac;
+    font-stretch:expanded;
+    font-style: italic;
+    font-weight: bold;
+}
+.end-text{
+    font-size: 2.5rem;
+    color: #777777;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+}
+.credit-small{
+    font-size: 1rem;
+    color: #777777;
+}
