@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment | MealMonkey</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!-- boxicons -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"/> <!-- remixicon -->
+        <link rel="stylesheet" href="payment.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="icon" href="mealMonkey.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    
+        <script src="index.js"></script>
+    
+    </head></head>
+<body>
+    <div class="navbar-container container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="navMM.png" height="50px" width="50px" alt="">
+              <span class="fs-4 nav-text" style="margin-left: 10px;"> Payment</span>
+            </a>
+      
+            <ul class="nav nav-pills">
+              <li class="nav-item" style="margin: 0 5px;"><a href="#" class="nav-link "><i class="ri-question-line " style="font-size: 17px;"></i> Help</a></li>
+              <li class="nav-item" style="margin: 0 10px;"><a href="#" class="nav-link "> <i class="ri-arrow-right-up-fill" style="font-size: 17px; "> </i>FAQs</a></li>
+              <li class="nav-item" style="margin: 0 10px;"><a href="#" class="nav-link text-bg-warning"><i class="ri-hand-heart-fill" style="font-size: 17px;"></i> Donate Food</a></li>
+            </ul>
+          </header>
+    </div>
+    <div class="hero-container container">
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">Complete Payment</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4 text-body-secondary">Why wait more , complete your payment and get your tummy full!</p>
+              <div class="payment-card container">
+                <div class="row container">
+                    <div class="col d-inline-flex justify-content-lg-start">
+                        <a href="orderfood.html" style="font-size: 27px;"><i class="ri-arrow-left-line"></i></a>
+                        <span class="font-text" style="font-size: 22px;margin-left: 15px;">Payment Options</span>
+                        
+                    </div>
+                    
+                </div>
+                <p style="margin-right: 73%;width: 45%;" class="text-body-secondary"><i class="ri-bubble-chart-fill" style="margin-right: 5px; color: blue;"></i><span id="total-price">Total : ₹0</span>  <span id="saving-text" style="color: rgb(5, 177, 5);font-weight: bold;margin-left: 5px;"><i class="ri-wallet-3-line"></i> Savings of ₹0</span></p>
+              </div>
+              <div class="hr-container mt-3">
+                <hr style="width: 100%;">
+              </div>
+              <div class="path-container container">
+                <div class="path-line">
+                    <div class="circle"></div>
+                    <div class="line"></div>
+                    <div class=" circle2"></div>
+                </div>
+                <div class="content">
+                    <div class="content-item mt-0">
+                        <h4>MealMonkey Partner :</h4>
+                        <span id="delivery-time">Delivery in : 0mins</span>
+                    </div>
+                    <div class="content-item mt-3">
+                        <h4 style="text-align: left;">You :</h4>
+                        <span id="train-number">Train number : 00000</span>
+                    </div>
+                </div>
+              </div>
+
+              <div class="hr d-flex justify-content-center mt-3">
+                <hr style="width: 100%;">
+            </div>
+
+              <div class="payment-app container mt-5">
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                      <div class="col">
+                        <center><img src="pplogo.png" class="upi-logo" alt=""></center><span class="upi-head" style="text-align: center;">PhonePe</span>
+                      </div>
+                      <div class="col">
+                        <center><img src="Paytm_logo.png" class="ptm" alt="" style="padding-bottom: 10px;"></center><span class="upi-head">PayTm</span>
+                      </div>
+                      <div class="col">
+                        <center><img src="gpay.webp" class="upi-logo" alt=""></center><span class="upi-head">Google Pay</span>
+                      </div>
+                      <div class="col">
+                        <center><img src="mbkwk.png" class="upi-logo" alt=""></center><span class="upi-head">MobiKwik</span>
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+            
+
+           
+
+         
+
+    </div>
+</body>
+</html>
