@@ -43,7 +43,7 @@
       
             <ul class="nav nav-pills">
               <li class="nav-item" style="margin: 0 5px;"><a href="#" class="nav-link "><i class="ri-question-line " style="font-size: 17px;"></i> Help</a></li>
-              <li class="nav-item" style="margin: 0 10px;"><a href="#" class="nav-link "> <i class="ri-arrow-right-up-fill" style="font-size: 17px; "> </i>FAQs</a></li>
+              
               <li class="nav-item" style="margin: 0 10px;"><a href="#" class="nav-link text-bg-warning"><i class="ri-hand-heart-fill" style="font-size: 17px;"></i> Donate Food</a></li>
             </ul>
           </header>
@@ -53,7 +53,8 @@
             <h1 class="display-4 fw-bold text-body-emphasis">Complete Payment</h1>
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4 text-body-secondary">Why wait more , complete your payment and get your tummy full!</p>
-              <div class="payment-card container">
+              <small style="font-weight: bold;font-size: 12px;color: #acacac;">This payment page is still in baking , Stay tuned for delicious upgrade!!</small>
+              <div class="payment-card container " style="">
                 <div class="row container">
                     <div class="col d-inline-flex justify-content-lg-start">
                         <a href="orderfood.html" style="font-size: 27px;"><i class="ri-arrow-left-line"></i></a>
@@ -62,7 +63,7 @@
                     </div>
                     
                 </div>
-                <p style="margin-right: 73%;width: 45%;" class="text-body-secondary"><i class="ri-bubble-chart-fill" style="margin-right: 5px; color: blue;"></i><span id="total-price">Total : ₹0</span>  <span id="saving-text" style="color: rgb(5, 177, 5);font-weight: bold;margin-left: 5px;"><i class="ri-wallet-3-line"></i> Savings of ₹0</span></p>
+                <p style="margin-right: 73%;width: 45%;" class="text-body-secondary"><i class="ri-bubble-chart-fill" style="margin-right: 5px; color: blue;"></i><span id="payment-amount-display">Total : ₹0</span>  <span id="saving-text" style="color: rgb(5, 177, 5);font-weight: bold;margin-left: 5px;"><i class="ri-wallet-3-line"></i> Savings of ₹<span class="discountPrice">0</span></span></p>
               </div>
               <div class="hr-container mt-3">
                 <hr style="width: 100%;">
@@ -76,11 +77,11 @@
                 <div class="content">
                     <div class="content-item mt-0">
                         <h4>MealMonkey Partner :</h4>
-                        <span id="delivery-time">Delivery in : 0mins</span>
+                        <span id="delivery-time">Delivery in : <span class="deliveryTime">0</span> mins</span>
                     </div>
                     <div class="content-item mt-3">
                         <h4 style="text-align: left;">You :</h4>
-                        <span id="train-number">Train number : 00000</span>
+                        <span id="train-number">Train number : <span class="trainNumber">00000</span></span>
                     </div>
                 </div>
               </div>
@@ -89,24 +90,73 @@
                 <hr style="width: 100%;">
             </div>
 
-              <div class="payment-app container mt-5">
+              <div class="payment-app container mt-3">
+                <div class="payment-head container d-block">
+                  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <img src="upilogo.webp" height="50px" width="50px" alt="">
+                  <span class="fs-4 upi-head-text" style="margin-left: 10px;"> Pay with UPI apps</span>
+                </a>                </div>
                 <div class="container text-center">
-                    <div class="row align-items-center">
-                      <div class="col">
-                        <center><img src="pplogo.png" class="upi-logo" alt=""></center><span class="upi-head" style="text-align: center;">PhonePe</span>
-                      </div>
-                      <div class="col">
-                        <center><img src="Paytm_logo.png" class="ptm" alt="" style="padding-bottom: 10px;"></center><span class="upi-head">PayTm</span>
-                      </div>
-                      <div class="col">
-                        <center><img src="gpay.webp" class="upi-logo" alt=""></center><span class="upi-head">Google Pay</span>
-                      </div>
-                      <div class="col">
-                        <center><img src="mbkwk.png" class="upi-logo" alt=""></center><span class="upi-head">MobiKwik</span>
-                      </div>
+                   <ul style="">
+                    <li class="upi-logo-list">
+                      <button class="btn btn-outline-dark upi-btn">
+                        <center><img src="pplogo.png" class="upi-logo" alt=""></center><span class="upi-head" style="text-align: center;"></span>
+                      </button>
+                    </li>
+                    <li class="upi-logo-list">
+                      <button class="btn btn-outline-dark upi-btn">
+                        <center><img src="Paytm_logo.png" class="ptm" alt="" style="padding-bottom: 10px;"></center><span class="upi-head"></span>
+                      </button>
+                    </li>
+                    <li class="upi-logo-list">
+                      <button class="btn btn-outline-dark upi-btn">
+                        <center><img src="gpay.webp" class="upi-logo" alt=""></center><span class="upi-head"></span>
 
-                    </div>
+                      </button>
+                    </li>
+                    <li class="upi-logo-list">
+                      <button class="btn btn-outline-dark upi-btn">
+                        <center><img src="mbkwk.png" class="upi-logo" alt=""></center><span class="upi-head"></span>
+
+                      </button>
+                    </li>
+                   </ul>
                   </div>
+                  <div class="hr d-flex justify-content-center mt-5 mb-3">
+                    <hr style="width: 100%;">
+                </div>
+
+            </div>
+            <div class="card-pay-container container mt-4">
+              <div class="payment-head container d-block mb-5">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                  <img src="cardlogo.png" height="50px" width="50px" alt="">
+                <span class="fs-4 upi-head-text" style="margin-left: 10px;"> Pay with card</span>
+              </a>                </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Card number</span>
+                <input type="tel" maxlength="12" class="form-control" placeholder="XXXX-XXXX-XXXX" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              
+              <div class="input-group mb-3">
+                <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">Card validity</span>
+              </div>
+              
+              
+              
+              
+              
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Name on card" aria-label="Name on card">
+                <span class="input-group-text">CVV</span>
+                <input type="tel" maxlength="4" class="form-control" placeholder="X X X X" aria-label="Server">
+              </div>
+              
+              <div class="input-group">
+                <span class="input-group-text">Delivery Address</span>
+                <textarea class="form-control" aria-label="With textarea" placeholder="House no. , Locality , Landmark, etc."></textarea>
+              </div>
             </div>
             
 
@@ -115,5 +165,97 @@
          
 
     </div>
+    <div class="footer-container container" style="text-align: start;">
+      <div class="footer-text container" style="text-align: left;">
+        <div class="col-sm-9 p-3 container d-flex" style="margin-top: 8rem;padding-right: 0;">
+          <h1 class="end-text container" style="padding-right: 0;"><em>MealMonkey</em></h1>
+        </div>
+        
+        <div class="col-sm-9 p-3 ">
+          <h2 class="end-footer-text d-flex">"All aboard the tasty express! Pick a payment option and let’s turn your train ride into a food adventure!"</h2><br>
+          <small class="credit-small"><em>A webpage designed and developed by <b>Sujal Sharma</b></em></small>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container mt-20 container">
+      <div class="hr d-flex justify-content-center">
+        <hr style="width: 100%;">
+    </div>
+
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+          <p class="col-md-4 mb-0 text-body-secondary"><b>© 2024 MealMonkey</b></p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center  mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <img src="navMM.png" style="height: 57px ; width: 4rem;" alt="">
+
+          </a>
+      
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="pnr.html" class="nav-link px-2 text-body-secondary">PNR Status</a></li>
+            <li class="nav-item"><a href="orderfood.html" class="nav-link px-2 text-body-secondary">Order food </a></li>
+          </ul>
+        </footer>
+  </div>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const amount = urlParams.get('amount'); // Retrieves the amount from the URL
+    
+    if (amount) {
+        document.getElementById('payment-amount-display').textContent = `Total Payable: ₹${amount}`;
+    }
+});
+document.addEventListener("DOMContentLoaded",function(){
+  randomTrainNum();
+});
+
+function randomTrainNum(){
+  const trainNum = document.querySelectorAll('.trainNumber')
+
+  trainNum.forEach(function(trainNumber){
+    let max = 17000;
+    let min = 11000;
+
+    let randomNum = Math.floor(Math.random()*(max-min+1)+min)
+    trainNumber.textContent=randomNum
+  })
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+  randomDeliveryTime();
+});
+
+function randomDeliveryTime(){
+  const delivTime = document.querySelectorAll('.deliveryTime')
+
+  delivTime.forEach(function(deliveryTime){
+    let max = 50;
+    let min = 10;
+
+    let randomDelivTime = Math.floor(Math.random()*(max-min+1)+min)
+    deliveryTime.textContent=randomDelivTime
+  })
+}
+
+
+document.addEventListener("DOMContentLoaded",function(){
+  randomDiscount();
+});
+
+function randomDiscount(){
+  const discountPrice=document.querySelectorAll('.discountPrice')
+
+  discountPrice.forEach(function(discountPrice){
+    let max=90;
+    let min=30;
+
+    let randomDiscountPrice=Math.floor(Math.random()*(max-min+1)+min)
+    discountPrice.textContent=randomDiscountPrice
+  })
+}
+</script>
+
+ 
 </html>

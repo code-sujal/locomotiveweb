@@ -238,7 +238,11 @@
                     </div>
                     <div id="cart" class="mt-5">
                       <ul id="cart-items" class="list-group"></ul><br><br><br><br><br>
-                      <a href="payment.html"><button id="total-price" type="button"  class="offcanvas-cart justify-content-center d-flex btn btn-success" style="text-align: center;margin-left: 35%;">Pay ₹0</button></a>                   </div>
+                      <a href="payment.html" id="payment-link">
+    <button id="total-price" type="button" class="offcanvas-cart justify-content-center d-flex btn btn-success" 
+    style="text-align: center;margin-left: 35%;">Pay ₹0</button>
+</a>
+                  </div>
                   <div class="btn cta-btn pay-btn">
                                      </div>
                 </div>
@@ -650,7 +654,20 @@ let cart = [];
             updateCart();
             alert(`Wohooo preparing ${name}!!...Click on view cart!`);
         });
+
+        
     });
+
+    document.getElementById("payment-link").addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    
+    // Redirect to payment page with total price as query parameter
+    window.location.href = `payment.html?amount=${totalPrice}`;
+});
+
+
+
+   
 
 
 

@@ -94,3 +94,50 @@
     border: 1px solid black;
 }
 
+.payment-card{
+    margin-top: 8rem;
+    background-color: #e7e7e6;
+    padding: 1rem;
+    border-radius: 22px;
+}
+
+
+.upi-logo-list{
+    margin: 20px 0;
+
+}
+
+.upi-btn{
+    width: 100%;
+}
+
+.upi-head-text{
+    color: #504f4f;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.end-text{
+    font-size: 2.5rem;
+    color: #777777;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+}
+
+.end-footer-text{
+    font-size: 2rem;
+    color: #acacac;
+    font-stretch:expanded;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.credit-small{
+    font-size: 1rem;
+    color: #777777;
+}
+
+.footer-container{
+    margin-left: 5rem;
+}
+
